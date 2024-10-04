@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale conosco</title>
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/form.css" />
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+      function calc_total() {
+        var qtd = parseInt(document.getElementById("cQtd").value);
+        tot = qtd * 1500;
+        document.getElementById("cTot").value = tot;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="cabeca">
+      <header id="cabecalho">
+        <hgroup>
+          <h1 style="text-align: left">Google Glass</h1>
+          <h2 style="text-align: left">A revolução do Google está chegando</h2>
+          <a href="CURSO(index).html"><img id="oculos" src="_imagens/googleglass.png"/></a>
+        </hgroup>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+    
+                <ul id="menu">
+                    <a href="CURSO(index).html"><li>Home</li></a>
+                    <a href="specs.html"><li>Especificações</li></a>
+                    <a href="fotos.html"><li>Fotos</li></a>
+                    <a href="multimidia.html"><li>Multimídia</li></a>
+                    <a href="fale-conosco.html"><li>Fale conosco</li></a>
+                </ul>
+            </div>
+        </nav>
+      </header>
+    </div>
+
+    <div id="interface">
+      <section id="p1">
+        <h1 id="plinha">Formulário de contato</h1>
+      </section>
+
+      <section id="outrosCabecalhos">
+        <article id="noticia-principal">
+          <header id="cabecalho-artigo">
+            <hgroup>
+              <h2>Fale conosco > Contato</h2>
+              <h3>por Marcus Vinicius</h3>
+              <h3 class="direita">Atualizado em: &nbsp; 13/04/2023</h3>
+            </hgroup>
+          </header>
+          <br />
+
+          <form method="post" d="fContato" baction="mailto:marcusv3003@gmail.com" oninput="calc_total();">
+            <fieldset id="usuario">
+              <legend>Identificação do usuário</legend>
+              <p>
+                <label for="cNome">Nome:</label>
+                <input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Nome Completo"/>
+              </p>
+              <p>
+                <label for="cSenha">Senha:</label>
+                <input type="password" name="tsenha" id="cSenha" size="15" maxlength="16" placeholder="Senha do usuário"/>
+              </p>
+              <p>
+                <label for="cEmail">E-mail:</label>
+                <input type="email" name="tEmail" id="cEmail" size="20" maxlength="50" placeholder="E-mail do usuário"/>
+              </p>
+              <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasc" />
+                <label for="cMasc">Masculino</label><br />
+                <input type="radio" name="tSexo" id="cFem" />
+                <label for="cFem">Feminino</label><br />
+                <input type="radio" name="tSexo" id="cPnd" />
+                <label for="cPnd">Prefiro não dizer</label><br />
+                <input type="radio" name="tSexo" id="cOut" />
+                <label for="cOut">Outro</label>
+                <input type="text" name="tSexo" id="cOut" size="20" maxlength="30" placeholder="Diga como se identifica"/>
+              </fieldset>
+              <p>
+                <label for="cData">Data de nascimento:</label>
+                <input type="date" name="tData" id="cData" />
+              </p>
+            </fieldset>
+
+            <fieldset id="endereco">
+              <legend>Endereço do usuário</legend>
+              <p>
+                <label for="cLog">Logradouro:</label>
+                <input type="text" name="tLog" id="cLog" size="20" maxlength="100" placeholder="Rua, Av, Trav, ..."/>
+              </p>
+              <p>
+                <label for="cNumero">Número:</label>
+                <input type="number" name="tNumero" id="cNumero" size="5" min="0" maxlength="100" placeholder="Número do logradouro"/>
+              </p>
+              <p>
+                <label for="cEst">Estado:</label>
+                <select name="tEst" id="cEst">
+                  <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP" selected>São Paulo</option>
+                  </optgroup>
+                  <optgroup label="Região Norte">
+                    <option value="RR">Roraima</option>
+                    <option value="AC">Acre</option>
+                  </optgroup>
+                  <optgroup label="Região Nordeste">
+                    <option value="PB">Paraíba</option>
+                    <option value="BA">Bahia</option>
+                  </optgroup>
+                  <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                  </optgroup>
+                  <optgroup label="Região Centro-Oeste">
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                  </optgroup>
+                </select>
+              </p>
+              <p>
+                <label for="cCid">Cidade:</label>
+                <input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua cidade" list="cidades"/>
+              </p>
+              <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+                <option value="Belford Roxo"></option>
+              </datalist>
+            </fieldset>
+
+            <fieldset id="mensagem">
+              <legend>Mensagem do usuário:</legend>
+              <p>
+                <label for="cUrg">Grau de urgência:</label> 1<input type="range" name="tUrg" id="cUrg" min="1" max="10" step="1"/>10
+              </p>
+              <p>
+                <label for="cMsg">Mensagem:</label>
+                <textarea name="tMsg" id="cMsg" cols="40" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+              </p>
+            </fieldset>
+
+            <fieldset id="pedido">
+              <legend>Quero um Google Glass</legend>
+              <p>
+                <input type="checkbox" name="tPed" id="cPed" checked />
+                <label for="cPed"
+                  >Gostaria de adquirir um Google Glass quando disponível</label
+                >
+              </p>
+              <p>
+                <label for="cCor">Cor:</label>
+                <input type="color" name="tCor" id="cCor" value="#000000" />
+              </p>
+              <p>
+                <label for="cQtd">Quantidade:</label>
+                <input type="number" name="tQtd"  id="cQtd" min="0"  max="5" value="0"/>
+              </p>
+              <p>
+                <label for="cTot">Preço total: R$</label>
+                <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly/>
+              </p>
+            </fieldset>
+            <!--<button type="submit" name="tEnviar">Enviar</button>-->
+            <a id="cEnviar" href="#" name="tEnviar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Enviar
+            </a>
+          </form>
+        </article>
+      </section>
+
+      <div id="fim">
+        <section id="redes">
+          <img id="oculos" src="_imagens/googleglass.png"/>
+          <a href="https://www.instagram.com/marcusv0_/" target="_blank"
+            ><img id="instagram" src="_imagens/instagram-icone-noir.png"
+          /></a>
+          <a href="https://twitter.com/drazyftw" target="_blank"
+            ><img id="twitter" src="_imagens/icone_twitter.png"
+          /></a>
+        </section>
+        <footer class="rodape">
+          <p>Marcus Vinicius &copy; 2023 - Todos os direitos reservados.</p>
+        </footer>
+      </div>
+    </div>
+    <script src="_javascript/header.js"></script>
+  </body>
+</html>

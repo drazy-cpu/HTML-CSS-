@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia</title>
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/media.css" />
+    <script src="_javascript/funcoes.js"></script>
+  </head>
+  <body>
+    <div id="cabeca">
+      <header id="cabecalho">
+        <hgroup>
+          <h1 style="text-align: left">Google Glass</h1>
+          <h2 style="text-align: left">A revolução do Google está chegando</h2>
+          <a href="CURSO(index).html"><img id="oculos" src="_imagens/googleglass.png"/></a>
+        </hgroup>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+    
+                <ul id="menu">
+                    <a href="CURSO(index).html"><li>Home</li></a>
+                    <a href="specs.html"><li>Especificações</li></a>
+                    <a href="fotos.html"><li>Fotos</li></a>
+                    <a href="multimidia.html"><li>Multimídia</li></a>
+                    <a href="fale-conosco.html"><li>Fale conosco</li></a>
+                </ul>
+            </div>
+        </nav>
+      </header>
+    </div>
+
+    <div id="interface">
+      <section id="p1">
+        <h1 id="plinha">Sons e videos</h1>
+      </section>
+
+      <section id="outrosCabecalhos">
+        <article id="noticia-principal">
+          <header id="cabecalho-artigo">
+            <hgroup>
+              <h2>Glass > Multimídia</h2>
+              <h3>por Marcus Vinicius</h3>
+              <h3 class="direita">Atualizado em: &nbsp; 13/04/2023</h3>
+            </hgroup>
+          </header>
+          <br />
+
+          <div id="tv-radio">
+            <audio id="musica" controls="controls">
+              <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+              Desculpe, mas não foi possível carregar o áudio.
+            </audio>
+            <iframe
+              id="yt"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/4EvNxWhskf8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <!--<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+            <source src="_media/getting-started.mp4" type="video/mp4"/>
+            Desculpe, mas não foi possível carregar o vídeo.
+            
+            CSS do vídeo:
+
+            video#filme {
+                display: block;
+                position: relative;
+                left: 90px;
+                top: 75px;
+                width: 440px;
+            }
+
+        </video>-->
+          </div>
+        </article>
+      </section>
+
+      <div id="fim">
+        <section id="redes">
+          <img id="oculos" src="_imagens/googleglass.png"/>
+          <a href="https://www.instagram.com/marcusv0_/" target="_blank"
+            ><img id="instagram" src="_imagens/instagram-icone-noir.png"
+          /></a>
+          <a href="https://twitter.com/drazyftw" target="_blank"
+            ><img id="twitter" src="_imagens/icone_twitter.png"
+          /></a>
+        </section>
+        <footer class="rodape">
+          <p>Marcus Vinicius &copy; 2023 - Todos os direitos reservados.</p>
+        </footer>
+      </div>
+    </div>
+    <script src="_javascript/header.js"></script>
+  </body>
+</html>

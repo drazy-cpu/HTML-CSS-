@@ -1,0 +1,722 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "FonteLogo";
+  src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+
+:root {
+    --cor-principal: #070c15;
+    --cor-claro: #06f3af;
+    --cor-secundaria: #091426;
+}
+
+/*Formatação do corpo do site*/
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+  color: #e4e4e4;
+  margin: 0px;
+  width: 100%;
+  font-size: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(232, 229, 229);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-claro);
+  border-radius: 20px;
+  border: 1px solid #091426;
+}
+
+a {
+  color: rgb(0, 86, 184);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div#interface {
+  padding-top: 120px;
+  background-color: var(--cor-principal);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+/*Fomrtação do cabeçalho do site*/
+
+div#cabeca {
+  background-color: none;
+  margin-top: -50px;
+  height: 100px;
+  /*border-bottom: 1px solid #06f3af;*/
+  width: 100%;
+  padding-top: 0px;
+  position: fixed;
+  z-index: 9999;
+}
+
+header#cabecalho img#icone {
+  position: relative;
+  max-width: 150px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  left: 520px;
+  top: -176px;
+}
+
+header#cabecalho img#oculos {
+  position: relative;
+  max-width: 125px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+  left: 20px;
+  top: -65px;
+}
+
+header#cabecalho {
+  height: 120px;
+  width: 100%;
+  padding: 0px 4%;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+header#cabecalho.rolagem{
+  margin-top: -60px;
+  padding: 30px 4%;
+  margin-bottom: 0px;
+  background: linear-gradient(to bottom right, #06f3af, #003e75);
+}
+
+
+
+hgroup{
+  width: 100%;
+  margin: 0px;
+}
+
+header#cabecalho h1 {
+  font-family: Montserrat;
+  font-weight: 100;
+  font-size: 35px;
+  color: #06f3af;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+  padding: 70px 0px 0px 0px;
+  margin: 10px 0px 0px 125px;
+}
+
+header#cabecalho.rolagem h1{
+  color: #081731;
+}
+
+header#cabecalho h2 {
+  font-family: Montserrat;
+  position: relative;
+  font-size: 20px;
+  color: white;
+  padding: -70px 0px 0px 0px;
+  margin: 0px 0px 0px 122px;
+}
+
+header#cabecalho.rolagem h2{
+  color: black;
+}
+
+#menuToggle {
+  display: block;
+  position:relative;
+  top: -120px;
+  left: 83%;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  text-transform: uppercase;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color:chocolate;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #06f3af;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  border-radius: 8px;
+  top: -35px;
+  left: -130px;
+  width: 300px;
+  padding: 50px;
+  padding-top: 65px;
+  background: #06f3af;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/*--------------------*/
+
+figure.figura-legenda {
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #070c15;
+  box-shadow: 0 0 5px 2px black;
+  position: relative;
+}
+
+figure.figura-legenda img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 5px black;
+}
+
+/*Formatação de imagem*/
+
+figure.figura-legenda figcaption {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: opacity 0.5s;
+}
+
+figure.figura-legenda:hover figcaption {
+  opacity: 1;
+}
+
+section#corpo p {
+  margin-left: 10px;
+}
+
+section#corpo header#cabecalho-artigo{
+  padding-top: 0px;
+}
+
+section#corpo header#cabecalho-artigo h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  color: white;
+}
+
+section#corpo header#cabecalho-artigo h3#nome {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: white;
+  text-align: left;
+}
+
+section#corpo header#cabecalho-artigo h3#dataPublicacao {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: white;
+  text-align: left;
+}
+
+section#outrosCabecalhos header#cabecalho-artigo h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  color: white;
+}
+
+section#outrosCabecalhos header#cabecalho-artigo h3#nome {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: white;
+  text-align: left;
+}
+
+section#outrosCabecalhos header#cabecalho-artigo h3#dataPublicacao {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: white;
+  text-align: left;  
+}
+
+section#outrosCabecalhos p {
+  margin: 10px;
+}
+
+.direita {
+  text-align: right;
+}
+
+section#outrosCabecalhos {
+  display: block;
+  margin-left: 10px;
+}
+
+section#corpo {
+  display: block;
+  width: 65%;
+  float: left;
+  padding-right: 15px;
+  margin-left: 10px;
+}
+
+section#corpo article#noticia-principal h2#subtitulo {
+  font-size: 17pt;
+  text-align: left;
+  color: #00d19d;
+  padding: 5px 0px 5px 10px;
+  margin: -10px 0px 10px 15px;
+  text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  width: auto;
+  margin: 15px 15px 15px auto;
+  display: grid;
+  grid-template-columns: 38% 62%;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #070c15;
+  box-shadow: 0 0 5px 2px black;
+}
+.container div {
+  padding: 20px;
+  border: 1.5px solid #000000;
+}
+
+#item-1 {
+  background: linear-gradient(to top left, #2d2d2d, #040404);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+#item-2 {
+  background: linear-gradient(to top left, #2d2d2d, #040404);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+#item-3 {
+  background: linear-gradient(to top left, #2d2d2d, #040404);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+#item-4 {
+  background: linear-gradient(to top left, #2d2d2d, #040404);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+#item-5 {
+  background: linear-gradient(to top right, #325db2, #12232e);
+  text-align: center;
+  font-weight: bold;
+}
+
+aside#lateral {
+  display: block;
+  width: 25%;
+  float: right;
+  padding: 10px;
+  margin: 10px;
+}
+
+aside#lateral h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 19pt;
+  border-bottom: 1px solid white;
+  text-align: center;
+  color: white;
+  margin-top: 0px;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+aside#lateral h3 {
+  font-size: 15pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-bottom: 3px solid #06f3af;
+  border-radius: 8px;
+  color: #06f3af;
+  padding: 5px;
+}
+
+div#fim footer.rodape {
+  background-color: #070c15;
+  margin-bottom: -10px;
+  padding-bottom: 5px;
+  height: 50px;
+  display: block;
+  clear: both;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+div#fim footer.rodape p {
+  text-align: center;
+  width: 100%;
+}
+
+div#fim section#redes {
+  clear: both;
+  width: 100%;
+  background-color: #091426;
+}
+
+div#fim section#redes img#instagram {
+  float: right;
+  position: relative;
+  
+  background: linear-gradient(to bottom right, #06f3af, #003e75);
+  padding: 4px;
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  top: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+div#fim section#redes img#twitter {
+  float: right;
+  position: relative;
+  
+  background: linear-gradient(to bottom right, #06f3af, #003e75);
+  padding: 4px;
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  top: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+div#fim section#redes img#instagram:hover {
+  width: 50px;
+  height: 50px;
+}
+
+div#fim section#redes img#twitter:hover {
+  width: 50px;
+  height: 50px;
+}
+
+div#fim section#redes img#oculos {
+  position: relative;
+  max-width: 125px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+  left: 10px;
+  top: 1px;
+  padding: 5px;
+}
+
+video#oquepode {
+  display: block;
+  position: relative;
+  
+  top: -10px;
+  width: 55%;
+  margin: 0px auto 0px auto;
+  /*border-radius: 20px;*/
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #070c15;
+  box-shadow: 0 0 5px 2px black;
+}
+
+video#videorecente {
+  display: block;
+  position: relative;
+  left: 5px;
+  top: -3px;
+  width: 95%;
+  margin: 0px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #070c15;
+  box-shadow: 0 0 5px 2px black;
+}
+
+/*@media (max-width: 980px){
+
+}*/
+
+@media (max-width: 650px){
+  /*.container{
+    grid-template-columns: 20% 46%;
+  }*/
+
+  body p{
+    font-size: 13px;
+    padding: 0px 20px 0px 0px;
+  }
+
+  section#corpo header#cabecalho-artigo h2 {
+    text-align: left;
+    font-size: 13pt;
+
+  }
+
+  section#corpo header#cabecalho-artigo h3 {
+    
+    font-size: 8pt;
+  }
+
+  aside#lateral {
+    float: none;
+    width: 100%;
+  }
+  video#videorecente {
+    width: 70%;
+    margin: 0px 0px 0px auto;
+    left: -20%;
+  }
+  section#corpo{
+    width: 100%;
+    text-align: center;
+  }
+  aside#lateral h4 {
+    margin-top: 20px;
+    font-size: 17pt;
+    border-bottom: none;
+    text-align: center;
+    color: white;
+}
+
+  aside#lateral h3 {
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 15px;
+    font-size: 15pt;
+    text-align: left;
+    border-bottom: none;
+  }
+  aside#lateral p{
+    margin-right: 10px;
+  }
+
+  section#corpo article#noticia-principal h2#subtitulo {
+    font-size: 13pt;
+  }
+
+  section#corpo article#noticia-principal h2#nome {
+    font-size: 5pt;
+  }
+
+  section#corpo article#noticia-principal h2#dataPublicacao {
+    font-size: 5pt;
+  }
+}
+
+@media (max-width: 938px){
+  section#p1 h1#plinha {
+    font-size: 25pt;
+  }
+}
+
+@media (max-width: 653px){
+  section#p1 h1#plinha {
+    font-size: 20pt;
+    height: 30px;
+    padding: 29px 0px 30px 50px;
+    margin: -10px 0px -10px -10px;
+  }
+}
+
+@media (max-width: 500px){
+  section#p1 h1#plinha {
+    font-size: 15pt;
+    height: 30px;
+    padding: 15px 0px 15px 50px;
+    margin: -10px 0px -10px -10px;
+  }
+}
+
+@media (max-width: 400px){
+  section#p1 h1#plinha {
+    font-size: 10pt;
+    height: 30px;
+    padding: 10px 0px 5px 50px;
+    margin: -10px 0px -10px -10px;
+  }
+}
+
+@media (max-width: 583px){
+  header#cabecalho h1 {
+    padding: 90px 0px 0px 0px;
+  }
+  header#cabecalho h2{
+    opacity: 0;
+  }
+  header#cabecalho img#oculos {
+    top: -80px;
+  }
+}
+
+@media (max-width: 470px){
+  header#cabecalho img#oculos {
+    top: -105px;
+  }
+}
+
+@media (max-width: 456px){
+  header#cabecalho h1 {
+    font-size: 20pt;
+    padding: 90px 0px 0px 0px;
+  }
+  header#cabecalho img#oculos {
+    top: -90px;
+  }
+}
+@media (max-width: 450px){
+  header#cabecalho h1 {
+    opacity: 0;
+  }
+  header#cabecalho img#oculos {
+    padding-left: 10px;
+    top: -100px;
+  }
+}
+
+@media (max-width: 308px){
+  header#cabecalho img#oculos {
+    top: -105px;
+  }
+}

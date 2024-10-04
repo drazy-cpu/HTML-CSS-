@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: 0px 0px 30px 210px;
+}
+
+section#conteudo img{
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #070c15;
+    box-shadow: 0 0 5px 2px black;
+}
+
+iframe#frame-spec {
+    width: 410px;
+    height: 280px;
+    border: none;
+    overflow: hidden;
+}
+
+iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+}

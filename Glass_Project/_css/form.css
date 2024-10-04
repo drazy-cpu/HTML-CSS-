@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+form {
+  width: 725px;
+  margin: auto;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #06f3af, #003e75);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 0 10px 4px black;
+  border: 2px solid #000000;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+  color: #000000;
+}
+
+input,
+textarea {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input:hover,
+textarea:hover {
+  background-color: #dddddd;
+}
+
+legend {
+  color: #070c15;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-size: 13pt;
+  font-family: sans-serif;
+}
+
+fieldset {
+  border-radius: 20px;
+  border-color: black;
+  margin: 20px;
+}
+
+fieldset#sexo {
+  width: 200px;
+}
+
+fieldset#usuario {
+  background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco {
+  background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco select {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #7c7b7b;
+  border-bottom: 2px solid #7c7b7b;
+}
+
+fieldset#mensagem {
+  background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+
+fieldset#pedido {
+  background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
+
+/*button[type="submit"] {
+    background: linear-gradient(to bottom right, #0d1e38, #070c15);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    color: #02e6ad;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0px 20px 18px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  button[type="submit"]:hover {
+    text-decoration: underline;
+  }*/
+
+textarea {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #7c7b7b;
+  border-bottom: 2px solid #7c7b7b;
+}
+
+div#fim footer.rodape p {
+  color: white;
+}
+
+/*BOTÃO DE MENU*/
+
+form a#cEnviar {
+  margin: 4px 0px 20px 18px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #070c15;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+a#cEnviar:hover {
+  background: #070c15;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #070c15, 0 0 25px #070c15, 0 0 50px #070c15;
+}
+
+a#cEnviar span {
+  position: absolute;
+  display: block;
+}
+
+a#cEnviar span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #070c15);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a#cEnviar span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #070c15);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a#cEnviar span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #070c15);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a#cEnviar span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #070c15);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
